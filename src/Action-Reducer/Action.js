@@ -1,9 +1,9 @@
 import { ALL, COMPLETED, CREATE, MARKASDONE, REMOVE, UNCOMPLETED } from "./Constants"
 
-export const createTodo = (text) => {
+export const createTodo = (text, id) => {
     return {
         type: CREATE,
-        payload: { text: text, isCompleted: false, id: Math.random() * 10000, createdAt: new Date().toLocaleString()}
+        payload: { text: text, isCompleted: false, id: id, createdAt: new Date().toLocaleString() }
     }
 }
 
@@ -17,11 +17,11 @@ export const deleteTodo = (todo) => {
 export const completeTodo = (todo) => {
     return {
         type: MARKASDONE,
-        payload: {...todo, isCompleted: !todo.isCompleted}
+        payload: { ...todo, isCompleted: !todo.isCompleted }
     }
 }
 
-export const editTodo  = (todo) => {
+export const editTodo = (todo) => {
     return deleteTodo(todo);
 }
 
@@ -48,7 +48,7 @@ export const allTodos = (todo) => {
 
 export const status = (type) => {
     return {
-        type: "set"+type,
+        type: "set" + type,
         payload: type
     }
 }

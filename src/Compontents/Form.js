@@ -22,7 +22,8 @@ const Form = ({inputText, setInputText}) => {
             setInputText("");
             return;
         }
-        dispach(createTodo(inputText));
+        const id = todos.length === 0 ? 0 : todos[todos.length-1].id + 1;
+        dispach(createTodo(inputText, id));
         setInputText("");
     }
 
