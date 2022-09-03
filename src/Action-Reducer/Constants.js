@@ -1,0 +1,10 @@
+export const CREATE = "CREATE";
+export const EDIT = "EDIT";
+export const MARKASDONE = "MARKASDONE";
+export const REMOVE = "REMOVE";
+export const COMPLETED = "completed";
+export const UNCOMPLETED = "uncompleted";
+export const ALL = "all";
+export const SETCOMPLETED = "setcompleted";
+export const SETUNCOMPLETED = "setuncompleted";
+export const SETALL = "setall";
